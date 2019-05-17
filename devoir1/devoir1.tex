@@ -1,0 +1,317 @@
+%--------------------------INITIALISATION DU DOCUMENT---------------------%
+%											%														%											%
+%                        >>>> Ne pas modifier cette partie <<<<			%
+																																					
+\documentclass[letterpaper,12pt,oneside,final]{book}
+\input{packages}
+\usepackage{amsfonts}
+
+
+\begin{document}
+\setlength{\parindent}{0pt}
+%--------------------------------------------------------------------------------------%
+
+%--------------------------PAGE DE COUVERTURE------------------------------%
+
+% A REMPLIR PAR L'ETUDIANT: 
+
+\newcommand\monPrenom{William}		%PRENOM
+\newcommand\monNom{Trépanier}			%NOM
+\newcommand\monMatricule{1952594}	%MATRICULE
+\newcommand\monGroupe{1}		%GROUPE
+
+%------------------------ Ne pas modifier la ligne suivante --------------%
+\input{page_couverture}
+%-------------------------------------------------------------------------%
+
+
+%========================= Début des réponses ============================%
+
+
+%-----------------------------QUESTION 1----------------------------------%
+\section*{Question 1}
+Soit $R:=\{(x,y)\;|\;-1\le x \le 2, \; 0\le y \le 4 \}$: \\
+\[ J_1 = \iint\limits_R (y^3 -2xy)\;dA = 
+\int_0^4 \int_{-1}^2 (y^3 -2xy)\;dxdy =
+\int_0^4 (y^3 \cdot x\Big|_{x=-1}^{x=2} - 2y\cdot\frac{x^2}{2}\Big|_{x=-1}^{x=2}) \;dy
+= \]
+\[ \int_0^4 (y^3(2-(-1)) \;-\; y(2^2-(-1)^2))\;dy = 
+\int_0^4 (3y^3 - 3y)\;dy = \frac{3y^4}{4} - \frac{3y^2}{2}\Big|_0^4 = \] 
+\[ \frac{3(4)^4}{4} - \frac{3(4)^2}{2} - (0 - 0) = 192 - 24 = 168 \]
+
+%-----------------------------QUESTION 2---------------------------------%
+\newpage \section*{Question 2}
+Pour trouver le domaine d'intégration, il faut trouver les points d'intersection
+entre la parabole $y = x^2-6x+5$ et la droite $y=5$. La parabole $y = x^2-6x+5$ se
+factorise en $y = (x-1)(x-5)$ ainsi ses zéros sont $x=1$ et $x=5$. Le sommet de la 
+parabole est obtenue avec l'équation $\frac{-b}{2a} = \frac{6}{2\cdot1} = 3$.
+Puisque $3^2 - 6\cdot3 + 5 = -4$, le sommet de la parabole est le point (3, -4). 
+Quant à l'intersection entre la parabole et la droite, on pose :
+\begin{equation}
+	5 = x^2 - 6x + 5 \Longleftrightarrow 0 = x^2 - 6x \Longleftrightarrow 0 = x(x-6)\nonumber
+\end{equation}
+En évaluant $x$, on obtient les points d'intersection (0, 5) et (6, 5). La zone
+d'intégration est ainsi la suivante : 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{img2_1.png}
+	\captionof{figure}{Zone d'intégration}
+\end{figure}
+
+On pose ainsi $D:=\{(x,y)\;|\;0\le x \le 6, \; x^2-6x+5 \le y \le 5 \}$ \\
+\[ J_2 = \iint\limits_D (x^2 + y\cos(\pi x))\; dA = \int_0^6 \int_{x^2-6x+5}^5 (x^2 + y\cos(\pi x))\; dydx = \]
+\[\int_0^6 (x^2\cdot y\Big|_{x^2-6x+5}^5 + \cos(\pi x)\cdot \frac{y^2}{2}\Big|_{x^2-6x+5}^5) \;dx = \]
+\[ \int_0^6 (x^2(5-x^2+6x-5) + \frac{\cos(\pi x)}{2}(5^2-(x^2-6x+5)^2) \;dx = \]
+\[ \int_0^6 (-x^4 + 6x^3 - \frac{x^4\cos(\pi x)}{2} + 6x^3\cos(\pi x)
+-23x^2\cos(\pi x)+30x\cos(\pi x)) \; dx = \]
+\begin{multline}
+	-\int_0^6 x^4\;dx \;+ \int_0^6 6x^3\;dx \;- \int_0^6 \frac{x^4\cos(\pi x)}{2} \;dx
+	+ \int_0^6 6x^3\cos(\pi x)\;dx \; \\- \int_0^6 23x^2\cos(\pi x)\;dx \;
+	+ \int_0^6 30x\cos(\pi x) \;dx = -I_1 + I_2 - I_3 + I_4 - I_5 + I_6 \nonumber
+\end{multline}
+Pour faciliter la lisibilité, les six intégrales seront évaluées séparément :
+\[ I_1 = \int_0^6 x^4\;dx = \frac{x^5}{5}\Big|_0^6 =\frac{6^5}{5}-0=\frac{7776}{5}\]
+\[ I_2 = \int_0^6 6x^3\;dx = 6 \int_0^6 x^3 \; dx = \frac{6 x^4}{4}\Big|_0^6 = \frac{3\cdot 6^4}{2}-0=1944\]
+\[ I_3 = \int_0^6 \frac{x^4\cos(\pi x)}{2} \;dx = \frac{1}{2} \int_0^6 x^4 (\cos(\pi  x)) \; dx\]
+En posant $u = x^4$ et $dv = \cos(\pi x)\;dx$, on calcule aussi $du = 4x^3\;dx$ et $v = \frac{\sin(\pi x)}{\pi}$. Ainsi, par l'intégration par parties : \\
+\[ I_3 = \frac{x^4 \sin(\pi x)}{2 \pi}\Big|_0^6 - \frac{2}{\pi} \int_0^6 x^3 (\sin(\pi x)) \; dx = 
+(0 - 0) - \frac{2}{\pi} \int_0^6 x^3 (\sin(\pi x)) \; dx = - \frac{2}{\pi} \int_0^6 x^3 (\sin(\pi x))\]
+En posant $u = x^3$ et $dv = \sin(\pi x)\;dx$, on calcule aussi $du = 3x^2\;dx$ et $v = \frac{-\cos(\pi x)}{\pi}$. Ainsi, par l'intégration par parties : \\
+\[ I_3 = \frac{2 x^3 \cos(\pi  x) )}{\pi ^2}\Big|_0^6 - \frac{6}{\pi^2} \int_0^6 x^2 \cos(\pi  x) \; dx 
+= \frac{432}{\pi ^2} - \frac{6}{\pi^2} \int_0^6 x^2 \cos(\pi  x) \; dx\]
+En posant $u = x^2$ et $dv = \cos(\pi x)\;dx$, on calcule aussi $du = 2x\;dx$ et $v = \frac{\sin(\pi x)}{\pi}$. Ainsi, par l'intégration par parties : \\
+\[ I_3 = \frac{432}{\pi^2} - \frac{6 x^2 \sin(\pi  x)}{\pi ^3}\Big|_0^6 + \frac{12}{\pi^3} \int_0^6 x\sin(\pi  x)\;dx
+= \frac{432}{\pi^2} + \frac{12}{\pi^3} \int_0^6 x\sin(\pi  x)\;dx\] \\
+En posant $u = x$ et $dv = \sin(\pi x)\;dx$, on calcule aussi $du = dx$ et et $v = \frac{-\cos(\pi x)}{\pi}$. Ainsi, par l'intégration par parties : \\
+\begin{multline}
+	I_3 = \frac{432}{\pi^2} - \frac{12x\cos(\pi x)}{\pi^4}\Big|_0^6 + \frac{12}{\pi^4} \int_0^6 \cos(\pi x)\;dx 
+	= \frac{432}{\pi^2} - \frac{72}{\pi^4} + \frac{12}{\pi^4}\int_0^6 \cos(\pi x) \;dx \\ 
+	= \frac{432}{\pi^2} - \frac{72}{\pi^4} + \frac{12}{\pi^5}\int_0^{6\pi} \cos(u) \;du 
+	= \frac{432}{\pi^2} - \frac{72}{\pi^4} + \frac{12 \sin(u)}{\pi^5}\Big|_0^{6\pi} 
+	= \frac{432}{\pi^2} - \frac{72}{\pi^4}
+\nonumber
+\end{multline}
+\[ I_4 = \int_0^6 6x^3 \cos(\pi x) \; dx = 6\int_0^6 x^3 \cos(\pi x) \; dx\]
+En posant $u = x^3$ et $dv = \cos(\pi x)\;dx$, on calcule aussi $du = 3x^2\;dx$ et $v = \frac{\sin(\pi x)}{\pi}$. Ainsi, par l'intégration par parties : \\
+\[ I_4 = \frac{6x^3\sin(\pi x)}{\pi}\Big|_0^6 - \frac{18}{\pi}\int_0^6 x^2 \sin(\pi x) \;dx = - \frac{18}{\pi}\int_0^6 x^2 \sin(\pi x) \;dx\]
+En posant $u = x^2$ et $dv = \sin(\pi x)\;dx$, on calcule aussi $du = 2x\;dx$ et $v = \frac{-\cos(\pi x)}{\pi}$. Ainsi, par l'intégration par parties : \\
+\[ I_4 = \frac{18x^2\cos(\pi x)}{\pi^2}\Big|_0^6 - \frac{36}{\pi^2}\int_0^6 x\cos(\pi x) \;dx = 
+\frac{648}{\pi^2} - \frac{36}{\pi^2}\int_0^6 x\cos(\pi x) \;dx \]
+En posant $u = x$ et $dv = \cos(\pi x)\;dx$, on calcule aussi $du = dx$ et $v = \frac{\sin(\pi x)}{\pi}$. Ainsi, par l'intégration par parties : \\
+\begin{multline}
+	I_4 = \frac{648}{\pi^2} - \frac{36x\sin(\pi x)}{\pi^3}\Big|_0^6 + \frac{36}{\pi^3}\int_0^6 \sin(\pi x) \; dx =
+	\frac{648}{\pi^2} + \frac{36}{\pi^4}\int_0^{6\pi} \sin(u)\; du \\
+	= \frac{648}{\pi^2} - \frac{36 \cos(u)}{\pi^4}\Big|_0^{6\pi} = \frac{648}{\pi^2}
+	\nonumber
+\end{multline}
+\[I_5 = \int_0^6 23x^2\cos(\pi x)\;dx = 23 \int_0^6 x^2\cos(\pi x)\;dx \]
+En posant $u = x^2$ et $dv = \cos(\pi x)\;dx$, on calcule aussi $du = 2x\;dx$ et $v = \frac{\sin(\pi x)}{\pi}$. Ainsi, par l'intégration par parties : \\
+\[I_5 = \frac{23x^2\sin(\pi x)}{\pi}\Big|_0^6 - \frac{46}{\pi}\int_0^6 x\sin(\pi x) \; dx
+= - \frac{46}{\pi}\int_0^6 x\sin(\pi x) \; dx \]
+En posant $u = x$ et $dv = \sin(\pi x)\;dx$, on calcule aussi $du = dx$ et et $v = \frac{-\cos(\pi x)}{\pi}$. Ainsi, par l'intégration par parties : \\
+\begin{multline}
+	I_5 = \frac{46x\cos(\pi x)}{\pi^2}\Big|_0^6 - \frac{46}{\pi^2}\int_0^6 \cos(\pi x) \;dx = \frac{276}{\pi^2} - \frac{46}{\pi^2}\int_0^6 \cos(\pi x) \;dx \\
+	= \frac{276}{\pi^2} - \frac{46}{\pi^3}\int_0^{6\pi} \cos(u)\;du = \frac{276}{\pi^2} - \frac{46 \sin(u)}{\pi^3}\Big|_0^{6\pi} = \frac{276}{\pi^2}
+	\nonumber 
+\end{multline}
+\[ I_6 = \int_0^6 30x\cos(\pi x) \;dx = 30 \int_0^6 x\cos(\pi x) \;dx\]
+En posant $u = x$ et $dv = \cos(\pi x)\;dx$, on calcule aussi $du = dx$ et $v = \frac{\sin(\pi x)}{\pi}$. Ainsi, par l'intégration par parties : \\
+\[I_6 = \frac{30x\sin(\pi x)}{\pi}\Big|_0^6 - \frac{30}{\pi}\int_0^6 \sin(\pi x) \;dx = \frac{-30}{\pi^2}\int_0^{6\pi} \sin(u)\; du = \frac{30 \cos(u)}{\pi^2}\Big|_0^{6\pi} = 0 \]
+Ainsi :
+\[ J_2 = -\frac{7776}{5} + 1944 - \frac{432}{\pi^2} + \frac{72}{\pi^4} + \frac{648}{\pi^2} - \frac{276}{\pi^2} + 0 = \frac{1944}{5} - \frac{60}{\pi^2} + \frac{72}{\pi^4}\]
+
+%-----------------------------QUESTION 3---------------------------------%
+\newpage \section*{Question 3}
+Pour calculer l'intégrale, il est plus simple de passer aux coordonnées polaires. 
+La droite $y=x$ coupe le premier cadran en deux. Ainsi, $\theta\in [0, \frac{\pi}{4}]$. Également,
+$r = \sqrt{9} = 3$. On pose $D:=\{(r,\theta)\;|\;0\le r\le 3,\;0\le \theta \le \frac{\pi}{4}\}$ : 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{img3_1.png}
+	\captionof{figure}{Zone d'intégration}
+\end{figure}
+\begin{multline}
+	J_3 = \iint\limits_D x(x^2+y^2)^{3/2}\;dA = \int_0^{\frac{\pi}{4}} \int_0^3 r\cos(\theta)(r^2)^{3/2} \;r \;drd\theta = 
+	\int_0^{\frac{\pi}{4}} \int_0^3 r^5 \cos(\theta)\;drd\theta = \\
+	\int_0^{\frac{\pi}{4}} \frac{r^6}{6}\Big|_0^3 \cos(\theta)\;d\theta = 
+	\frac{243}{2} \int_0^{\frac{\pi}{4}} \cos(\theta) \; d\theta = \frac{243}{2} \cdot \sin(\theta)\Big|_0^{\frac{\pi}{4}} =
+	\frac{243}{2}(\frac{\sqrt{2}}{2} - 0) = \frac{243\sqrt{2}}{4}
+	\nonumber
+\end{multline}
+
+%-----------------------------QUESTION 4---------------------------------%
+\newpage \section*{Question 4}
+Il est opportun de passer des coordonnées cartésiennes aux coordonnées polaires. Le domaine d'intégration est un 
+disque de rayon $\sqrt{4} = 2$, ainsi $r\in[0,2]$. Puisqu'on intègre sur le cercle en entier, $\theta\in[0, 2\pi]$. \newline
+On pose $D:=\{(r,\theta)\;|\;0\le r\le 2,\;0\le \theta \le 2\pi\}$ :
+\[ \iint\limits_D 10 000 - e^{(12+x^2+y^2)^{3/4}}\;dA = \int_0^{2\pi} \int_0^2 (10 000 - e^{(12+r^2)^{3/4}})r \;drd\theta\]
+Soit $f(r,\theta) = (10 000 - e^{(12+r^2)^{3/4}})r$, il est possible de borner $f(r,\theta)$ par $g(r,\theta) = 7 000r$ et 
+$h(r,\theta) = 10 000r$. Considérant :
+\[ g(r,\theta) \le f(r, \theta) \le h(r,\theta) \quad \forall (r, \theta) \in D \]
+Ainsi, par théorème :
+\[ \iint\limits_D g(x,y) \;dA \le \iint\limits_D f(x,y) \;dA \le \iint\limits_D h(x,y) \;dA\]
+\[ \int_0^{2\pi} \int_0^2 7 000r \;drd\theta\le \iint\limits_D f(x,y) \;dA \le \int_0^{2\pi} \int_0^2 10 000r \;drd\theta\]
+\[ \int_0^{2\pi} \frac{7000r^2}{2}\Big|_0^2 \;d\theta \le \iint\limits_D f(x,y) \;dA \le \int_0^{2\pi} \frac{10000r^2}{2}\Big|_0^2 \;d\theta\]
+\[ 14000\theta \Big|_0^{2\pi} \le \iint\limits_D f(x,y) \;dA \le 20000\theta \Big|_0^{2\pi}\]
+\[ 28000\pi \le \iint\limits_D f(x,y) \;dA \le 40000\pi\]
+
+
+%-----------------------------QUESTION 5 ---------------------------------%
+\newpage \section*{Question 5}
+
+
+
+\begin{enumerate}[a)]
+
+\item % a)
+Pour répondre à la question, il est plus simple d'inverser les bornes
+d'intégration. Soit $D_1:=\{(x,y)\;|\; 0\le x \le 4, \sqrt{x}\le y \le 2\}$, est équivalent à \\
+$D_2:=\{(x,y)\;|\; 0\le x \le y^2, 0\le y \le 2\}$ comme en témoigne la figure : 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=0.3]{img5_1.png}
+	\captionof{figure}{Zone d'intégration}
+\end{figure}
+\[J_4= \int_0^4 \int_{\sqrt{x}}^4 \Big[1 + y^2\cos(x\sqrt{y})\Big]\; dydx
+=\int_0^2 \int_0^{y^2} \Big[1 + y^2\cos(x\sqrt{y})\Big]\; dxdy =\]
+\[ \int_0^2 \Big[x\Big|_0^{y^2} + \frac{y^2}{\sqrt{y}}\sin(x\sqrt{y})\Big|_{x=0}^{x=y^2}\Big] \;dy 
+= \int_0^2 \Big[y^2 + y^{3/2}\sin(y^{5/2}) \Big]\; dy = \frac{8}{3} + \int_0^2 y^{3/2}\sin(y^{5/2} \;dy)\]
+En posant $u=y^{5/2}$, on calcule $\frac{2}{5}du = y^{3/2}dy$. Par changement de variables : 
+\begin{multline}
+J_4 = \frac{8}{3} + \int_0^{4\sqrt{2}} \frac{2}{5} \sin(u) \;du = \frac{8}{3} + \frac{-2}{5} \cos(u)\Big|_0^{4\sqrt{2}} \\
+= \frac{8}{3} + \frac{-2}{5}\big(\cos(4\sqrt{2}) - \cos(0) \big) = \frac{46}{15} - \frac{2\cos(4\sqrt{2})}{5}
+\nonumber
+\end{multline}
+
+Pour que l'intégrale représente un volume, il faut que $f(x,y) = 1 + y^2\cos(x\sqrt{y}) \geq 0 \; \forall \; (x,y) \;
+\in D_1$. Toutefois, $(\pi, 2) \in D_1$ et $f(\pi, 2) < 0$. Ainsi, par contradiction, l'intégrale ne représente pas un volume. 
+\\
+
+\item % b)
+
+Soit $D:=\{(x,y)\;|\; -(2-\frac{y}{2})\le x \le 2-\frac{y}{2}, -4\le y \le 4\}$, il s'agit d'un domaine symétrique
+tant pour $x$ que pour $y$ par rapport à 0 : 
+\[ J_5 = \iint\limits_D \big[ x^4y + yx^4\sqrt[4]{1-x^4y^4}\; \big] dA =
+\int_{-4}^4 \int_{-(2-\frac{y}{2})}^{2-{\frac{y}{2}}} x^4y \;dxdy \;+\; \int_{-(2-\frac{y}{2})}^{2-{\frac{y}{2}}} yx^4\sqrt[4]{1-x^4y^4} \;dxdy\]
+Puisque $yx^4\sqrt[4]{1-x^4y^4}$ est impaire en $y$ (soit $y^5$) et qu'on intègre sur un domaine symétrique par rapport à 0,
+la seconde partie de l'intégrale est égale à 0 : 
+\[ J_5 = \int_{-4}^4 \int_{-(2-\frac{y}{2})}^{2-{\frac{y}{2}}} x^4y \;dxdy \;+ 0 = \int_{-4}^4 y \cdot \frac{x^5}{5}\Big|_{-(2-\frac{y}{2})}^{2-{\frac{y}{2}}}\;dy =
+\frac{2}{5}\int_{-4}^4 y(2-\frac{y}{2})^5 \;dy \]. En posant $u = 2-\frac{y}{2}$ et en calculant $du = \frac{-1}{2}dy$ :  
+\[J_5 = \frac{8}{5} \int_4^0 (u^6-2 u^5) du = \frac{8}{5} \cdot \frac{u^7}{7}\Big|_4^0 - \frac{16}{5} \cdot \frac{u^6}{6}\big|_4^0 = - \frac{32768}{21} \]
+\end{enumerate}
+
+
+%-----------------------------QUESTION 6 ---------------------------------%
+\newpage \section*{Question 6}
+Puisque le volume désiré est celui du premier octant, il faut considérer également les plans $x=0$ et $y=0$.
+Nous avons les équations $x+z=5 \Leftrightarrow z=5-x$ et $y+2z=4 \Leftrightarrow z=2-\frac{y}{2}$. En posant
+$5-x = 2-\frac{y}{2}$, nous pouvons trouver l'intersection des deux plans, soit le plan $y=x-3$. Puisque la
+valeur maximale de $z$ est dictée par le plan qui se retrouve sous l'autre plan, il est opportun de procéder 
+par deux intégrales, puisqu'une portion du volume est borné par le plan $z=5-x$ alors qu'une seconde est borné 
+par le plan $z=2-\frac{y}{2}$. Nous avons ainsi $B_1=\{(x,y,z)\;|\;0\le x\le y+3,\;0\le y\le 4,\; 0 \le z \le 2-\frac{y}{2}\}$. 
+Également, $B_2=\{(x,y,z)\;|\;y+3\le x\le 5,\;0\le y\le 4,\; 0 \le z \le 5-x\}$
+\[ V = \iiint\limits_{B_1} dV + \iiint\limits_{B_2} dV = \int_0^4\int_0^{y+3}\int_0^{2-\frac{y}{2}} dzdxdy
++ \int_0^4\int_{y+3}^5\int_0^{5-x} dzdxdy =\]
+\[ \int_0^4 \left(-\frac{y^2}{2}+\frac{y}{2}+6\right) \, dy + \int_0^4 \left(\frac{y^2}{2}-2y+2\right) \;dy =
+ \frac{52}{3} + \frac{8}{3} = 20\]
+
+%-----------------------------QUESTION 7---------------------------------%
+\newpage \section*{Question 7}
+
+
+ \begin{enumerate}[a)]
+
+\item % a)
+
+	\begin{enumerate}[(i)]
+	
+	\item % (i)
+	
+	Considérant que la densité dépend de la distance au sommet du triangle qui joint les deux longs côtés, on place celui-ci à l'origine $(0,0)$. Les 
+	deux autres sommets du triangle se retrouvent à $(-2,6)$ et $(2,6)$. On peut calculer la distance à l'aide de la formule $\sqrt{x^2+y^2}$.
+	Ainsi, $\rho(x,y) = \kappa\sqrt{x^2+y^2}$. Pour calculer le moment par rapport à l'axe des $x$ :
+	\[ I_x = \iint\limits_D y^2\rho(x,y) \;dA = \kappa\iint\limits_D y^2 \sqrt{x^2+y^2} \;dA\]
+	On pose $D:=\{(r,\theta)\;|\;0\le r\le 6\csc(\theta),\;\arctan(3)\le \theta \le \pi - \arctan(-3) \}$
+	\[ I_x = \kappa \int_{\arctan(3)}^{\pi - \arctan(-3)} \int_0^{6\csc(\theta)} r^4\sin^2(\theta) \;drd\theta = 
+	\kappa \int_{\arctan(3)}^{\pi - \arctan(-3)} \sin^2(\theta) \frac{r^5}{5}\Big|_0^{6\csc(\theta)} d\theta = \]
+	\[ \kappa \frac{7776}{5} \int_{\arctan(3)}^{\pi - \arctan(-3)} \csc^3(\theta)\; d\theta
+	= \kappa \frac{15552}{5} \int_{\arctan(3)}^{\frac{\pi}{2}} \csc^3(\theta)\; d\theta\]
+	Par la formule de réduction (\#72):
+	\[ I_x = \kappa \frac{15552}{5} \Big[\frac{-1}{2} \cdot \csc(\theta)\cot(\theta)  + \frac{1}{2}\ln|\csc(\theta)-\cot(\theta)|
+	\Big]_{\arctan(3)}^{\frac{\pi}{2}} \]
+	\[= \kappa \;\frac{15552}{5}\Big( \frac{\sqrt{10}}{18} - \frac{1}{2}\ln\big(\frac{\sqrt{10}-1}{3}\big)\Big) \approx 2111.38\kappa\]
+
+	\item % (ii)
+	\[ I_y = \iint\limits_D x^2\rho(x,y) \;dA = \kappa\iint\limits_D x^2 \sqrt{x^2+y^2} \;dA \]
+	On pose $D:=\{(r,\theta)\;|\;0\le r\le 6\csc(\theta),\;\arctan(3)\le \theta \le \pi - \arctan(-3) \}$
+	\[ I_y = \kappa \int_{\arctan(3)}^{\pi - \arctan(-3)} \int_0^{6\csc(\theta)} r^4\cos^2(\theta) \;drd\theta = 
+	\kappa \frac{7776}{5} \int_{\arctan(3)}^{\pi - \arctan(-3)} \csc^5(\theta)\cos^2(\theta) \; d\theta \]
+	\[ \kappa \frac{15552}{5} \int_{\arctan(3)}^{\frac{\pi}{2}} \frac{1-\sin^2(\theta)}{\sin^5(\theta)} \;d\theta = 
+	\kappa \frac{15552}{5} \int_{\arctan(3)}^{\frac{\pi}{2}} \csc^5(\theta)\;d\theta - \int_{\arctan(3)}^{\frac{\pi}{2}} \csc^3(\theta)\; d\theta = \]
+	Par la formule de réduction (\#78) et le résultat de l'intégrale précédente : 
+	\[ I_y = \kappa \frac{15552}{5} \Big( \frac{-1}{4}\cot(\theta)\csc^3(\theta)\Big|_{\arctan(3)}^{\frac{\pi}{2}} + 
+	\frac{3}{4} \int_{\arctan(3)}^{\frac{\pi}{2}} \csc^3(\theta)\; d\theta - \int_{\arctan(3)}^{\frac{\pi}{2}} \csc^3(\theta)\; d\theta \Big) = \]
+	\[ \kappa \frac{3888}{5} \Big( \frac{10\sqrt{10}}{81} - \frac{1}{4}\int_{\arctan(3)}^{\frac{\pi}{2}} \csc^3(\theta)\; d\theta\Big) = \]
+	\[ \kappa \;\frac{3888}{5} \Big( \frac{10\sqrt{10}}{81} - \frac{1}{4}\big(\frac{\sqrt{10}}{18} - \frac{1}{2}\ln\big(\frac{\sqrt{10}-1}{3} \big)\big)\Big) 
+	\approx 237.59\kappa\]
+	\\
+	\end{enumerate}
+
+\item % b)
+
+ Il est plus facile de tourner la plaque autour de l'axe $A_2$ puisque le moment d'inertie (qui s'oppose à la variation de la vitesse) est plus faible. 
+
+\end{enumerate}
+
+%-----------------------------QUESTION 8---------------------------------%
+\newpage \section*{Question 8}
+\subsection*{1. Définition de la fonction de densité} 
+On énonce que la densité est proportionnelle à la distance au plan : \\ $\{(x,y,z)\;|\;(x,y)\in \mathbb{R},\; z=0\}$. Ainsi, pour tout point 
+de la région, la distance au plan $z=0$ est égale à $z$. Ainsi : 
+\[ \rho(x,y,z) = \kappa z\]
+
+\subsection*{2. Description de la région E}
+En effectuant une projection de la région E sur le plan $D:= xz$, nous avons : 
+\[ B:= \big\{(x,y,z)\;|\;(x,z)\in D, -1 \le y \le \frac{z-x^2}{a}\big\} \] Soit : 
+\[ B:= \big\{(x,y,z)\;|\; -\sqrt{a} \le x \le \sqrt{a},\; -1 \le y \le \frac{z-x^2}{a},\; 0 \le z \le 2\big\} \]
+
+\subsection*{3. Calcul de la masse}
+\[ m = \iiint\limits_E \rho(x,y,z) \; dV = \kappa \int_0^2 \int_{-\sqrt{a}}^{\sqrt{a}} \int_{-1}^{\frac{z-x^2}{a}} z\; dydxdz = 
+\kappa \int_0^2 \int_{-\sqrt{a}}^{\sqrt{a}} \big[\frac{z(z-x^2)}{a} + z \big] \;dxdz = \]
+\[ \kappa \int_0^2 \Big(\frac{2 z^2}{\sqrt{a}}-\frac{2 \sqrt{a} z}{3}+2 \sqrt{a}\Big) \, dz = \kappa\; \frac{8 (a+2)}{3 \sqrt{a}}\]
+
+\subsection*{4. Calcul des moments}
+\[ M_{yx} = \iiint\limits_E x\rho(x,y,z) \; dV = \kappa \int_0^2 \int_{-\sqrt{a}}^{\sqrt{a}} \int_{-1}^{\frac{z-x^2}{a}} xz\; dydxdz = 
+\kappa \int_0^2 \int_{-\sqrt{a}}^{\sqrt{a}} xz\big(\frac{z-x^2}{a} + 1\big) \;dxdz\]
+Puisque $x$ ici est une fonction impaire intégrée sur un domaine symétrique à 0 : 
+\[ M_{yz} = 0\]
+
+\[ M_{xz} = \iiint\limits_E y\rho(x,y,z) \; dV = \kappa \int_0^2 \int_{-\sqrt{a}}^{\sqrt{a}} \int_{-1}^{\frac{z-x^2}{a}} yz\; dydxdz = 
+\kappa \int_0^2 \int_{-\sqrt{a}}^{\sqrt{a}} \big(\frac{z\left(z-x^2\right)^2}{2a^2}-\frac{z}{2}\big)\;dxdz = \]
+\[\kappa \int_0^2 \frac{15z^3-10a^2-12a^2z}{15a^{\frac{3}{2}}}\;dz = 
+\kappa\; \frac{4\left(-18a^2-20a+45\right)}{45a^{\frac{3}{2}}}\] \\
+
+\[ M_{xy} = \iiint\limits_E z\rho(x,y,z) \; dV = \kappa \int_0^2 \int_{-\sqrt{a}}^{\sqrt{a}} \int_{-1}^{\frac{z-x^2}{a}} z^2\; dydxdz = 
+\kappa \int_0^2 \int_{-\sqrt{a}}^{\sqrt{a}} \frac{z^2\left(z-x^2\right)}{a}+z^2 \; dxdz = \]
+\[ \kappa \int_0^2 \frac{2z^3}{\sqrt{a}} + \frac{4\sqrt{a}z^2}{3} \;dz = 
+\kappa \; \Big[\frac{8}{\sqrt{a}}+\frac{32\sqrt{a}}{9}\Big]  \]
+
+\subsection*{5. Coordonnées en x et y du centre de masse}
+\[ \overline{x} = \frac{M_{yz}}{m} = \frac{0}{\frac{8 (a+2)}{3 \sqrt{a}}} = 0 \]
+\[ \overline{y} = \frac{M_{xz}}{m} \frac{\frac{4\left(-18a^2-20a+45\right)}{45a^{\frac{3}{2}}}}{\frac{8 (a+2)}{3 \sqrt{a}}}
+= (-18 a^2-20 a+45)/(30 a (a+2)) \]
+
+\subsection*{6. Coordonnée en z du centre de masse}
+\[ \overline{z} = \frac{M_{xy}}{m} = \frac{\frac{8}{\sqrt{a}}+\frac{32\sqrt{a}}{9}}{\frac{8 (a+2)}{3 \sqrt{a}}} = 
+\frac{3 \left(\frac{32 \sqrt{a}}{9}+\frac{8}{\sqrt{a}}\right) \sqrt{a}}{8 (a+2)}\]
+
+\subsection*{7. Inégalité correspondant à la question}
+\[\frac{3 \left(\frac{32 \sqrt{a}}{9}+\frac{8}{\sqrt{a}}\right) \sqrt{a}}{8 (a+2)} > 0\] 
+
+\subsection*{8. Solution de l'inégalité}
+\[\frac{3 \left(\frac{32 \sqrt{a}}{9}+\frac{8}{\sqrt{a}}\right) \sqrt{a}}{8 (a+2)} > 0 \Leftrightarrow a > 0 \; \text{dans} \;\mathbb{R} \]
+
+\subsection*{9. Conclusion}
+Le centre de masse du solide est situé au dessus de sa base lorsque $a>0$.
+
+\end{document}
