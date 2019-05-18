@@ -113,14 +113,37 @@ Par changement de variable en posant $u = \cos\phi$ et en calculant
 \begin{enumerate}[a)]
 
 \item % a)
-
- % A REMPLIR PAR L'ETUDIANT:
+Soit $P = \big(\frac{1}{2}, \frac{\sqrt{3}}{2}, -\frac{1}{2}\big)$ et $\vec{r}(t)
+    = \cos(\pi t)\vec{i} + \sin(\pi t)\vec{j} + \cos(2\pi t)\vec{k}, 0\le t\le 2$.
+    En isolant $t$ : 
+\begin{align*}
+    \cos(\pi t) = \frac{1}{2} \Rightarrow t\in\big\{\frac{1}{3},\,\frac{5}{3}
+        \big\},\; 0 \le \pi t \le 2\pi \\
+    \sin(\pi t) = \frac{\sqrt{3}}{2} \Rightarrow t\in\big\{\frac{1}{3},\,
+        \frac{2}{3}\big\},\; 0 \le \pi t \le 2\pi \\
+    \cos(2\pi t) = -\frac{1}{2} \Rightarrow t\in \big\{\frac{1}{3},\,
+        \frac{2}{3}\big\},\; 0 \le 2\pi t \le 2\pi \\
+\end{align*}
+Puisque $t=\frac{1}{3}$ est commun aux trois équations et que $t=\frac{1}{3}
+    \in[0,2]$, $P \in C$
 
 \item % b)
+\[ \vec{r}^{\;\prime}(t) = -\pi\sin(\pi t)\vec{i} + \pi\cos(\pi t)\vec{j} - 
+    2\pi\sin(2\pi t)\vec{k}\]
 
- % A REMPLIR PAR L'ETUDIANT:
+    En évaluant la dérivée au point $t = \frac{1}{3}$ :
+\[ \vec{r}^{\;\prime}\Big(\frac{1}{3}\Big) = -\pi\sin\Big(\frac{\pi}{3}\Big)\vec{i} + 
+    \pi\cos\Big(\frac{\pi}{3}\Big)\vec{j} - 2\pi\sin\Big(\frac{2\pi}{3}\Big)\vec{k}
+    = -\frac{\sqrt{3}\pi}{2}\vec{i} + \frac{\pi}{2}\vec{j} - \sqrt{3}\pi\vec{k}\]
 
+Pour obtenir les équations paramétriques, on ajoute le point $P$ à chaque paramètre :
 
+\[\begin{cases}
+    x=-\frac{\sqrt{3}\pi}{2}t + \frac{1}{2} \\
+    y=\frac{\pi}{2}t + \frac{\sqrt{3}}{2} \\
+    z=-\sqrt{3}\pi t - \frac{1}{2}
+\end{cases}
+0 \le t \le 2\]
 \end{enumerate}
 
 
