@@ -66,8 +66,8 @@ Nous avons deux sphères, soit $S_1 := x^2+y^2+z^2 = 4$ et
     considérant $z \ge 0 \Rightarrow 0 \le \phi \le \frac{\pi}{2}$.
     Nous avons donc la région $E$ suivante : 
 
-\[ E=\{(\rho,\theta, \phi)\;|\;2\le \rho\le 4,\;\frac{-\pi}{2}\le \theta \le 
-    \frac{\pi}{2},\; 0 \le \phi \le \frac{\pi}{2}\} \]
+\[ E=\Big\{(\rho,\theta, \phi)\;|\;2\le \rho\le 4,\;\frac{-\pi}{2}\le \theta \le 
+    \frac{\pi}{2},\; 0 \le \phi \le \frac{\pi}{2}\Big\} \]
 
 Quant à l'intégrale : 
 
@@ -160,11 +160,62 @@ Par changement de variable en posant $u = \cos\phi$ et en calculant
 \begin{enumerate}[a)]
 
 \item % a)
+Puisque la densité du solide est proportionnelle au carré de la distance de
+    l'origine, on peut obtenir celle-ci avec l'équation $(\sqrt{x^2+y^2+z^2})^{1/2}
+    = x^2+y^2+z^2$. Ainsi, $\rho(x,y,z)=\kappa(x^2+y^2+z^2)$. En coordonnées
+    cylindriques, nous avons : 
 
- % A REMPLIR PAR L'ETUDIANT:
+\[ x^2 + y^2 = 1 \Leftrightarrow r^2 = 1 \Leftrightarrow r = 1\;, r \ge 0\]
+\[ x^2 + y^2 + z^2 = 4 \Leftrightarrow r^2 + z^2 = 4 \Leftrightarrow r=\sqrt{4-z^2},
+    \; r \ge 0 \]
+
+Pour trouver les bornes de $z$, on trouve l'intersection entre la sphère et le
+    cylindre :
+
+\[ 1 = 4-z^2 \Leftrightarrow x^2 = 3 \Leftrightarrow z = \pm\sqrt{3} \]
+
+Considérant que la sphère et le cylindre font un tour complet, $\theta\in[0,2\pi]$.
+    Ainsi, nous avons la région suivante : 
+
+\[ B_C=\{(r,\theta, z)\;|\;1\le r\le \sqrt{4-z^2},\;0\le \theta \le 2\pi,\;
+    -\sqrt{3} \le z \le \sqrt{3}\} \]
+
+Quant à l'intégrale :
+
+\[ m = \iiint\limits_{B_C} \kappa\,(x^2+y^2+z^2)\;dV = \kappa\,\int_0^{2\pi}
+    \int_{-\sqrt{3}}^{\sqrt{3}}\int_1^{\sqrt{4-z^2}} \big(r^3 + rz^2\big)\;
+    drdzd\theta\] \\
+
+En coordonnées sphériques, pour obterir les bornes de $\rho$ :
+
+\begin{multline*}
+    x^2 + y^2 = 1 \Leftrightarrow \rho^2\sin^2\phi\cos^2\theta + 
+        \rho^2\sin^2\phi\sin^2\theta = 1 \Leftrightarrow \\
+        \rho^2\sin^2\phi(\cos^2\theta + \sin^2\theta) = 1 \Leftrightarrow
+        \rho\sin\phi = 1 \Leftrightarrow \rho=\csc\theta \\
+\end{multline*}
+\[ x^2 + y^2 + z^2 = 4 \Leftrightarrow \rho^2 = 4 \Leftrightarrow \rho = 2,\;r\ge0\]
+
+Quant aux bornes de $\phi$, il suffit de trouver l'angle par rapport à l'axe des 
+    $z$ positif où $\rho = 2$ et $z=\sqrt{3}$ (intersection trouvée lors des
+    coordonnées cylindriques) :
+\[ cos\phi = \frac{\sqrt{3}}{2} \Leftrightarrow \phi = 
+    \arccos\Big(\frac{\sqrt{3}}{2}\Big) = \frac{\pi}{6} \]
+\[ \pi - \frac{\pi}{6} = \frac{5\pi}{6}\]
+
+Considérant que la sphère et le cylindre font un tour complet, $\theta\in[0,2\pi]$.
+    Ainsi, nous avons la région suivante : 
+
+\[ B_S=\Big\{(\rho,\theta, \phi)\;|\;\csc\phi\le \rho\le 2,\;0 \le \theta \le 2\pi,
+    \; \frac{\pi}{6}\le \phi \le \frac{5\pi}{6}\Big\} \]
+
+Quant à l'intégrale :
+
+\[ m = \iiint\limits_{B_C} \kappa\,(x^2+y^2+z^2)\;dV = \kappa\,\int_0^{2\pi}
+    \int_{\frac{\pi}{6}}^{\frac{5\pi}{6}}\int_{\csc\phi}^{2} \rho^4\sin\phi\;
+    d\rho d\phi d\theta \]
 
 \item % b)
-
  % A REMPLIR PAR L'ETUDIANT:
 
 
