@@ -8,6 +8,7 @@
 
 \begin{document}
 \setlength{\parindent}{0pt}
+\newcommand{\norme}[1]{\left\Vert #1\right\Vert}
 %--------------------------------------------------------------------------------------%
 
 %--------------------------PAGE DE COUVERTURE------------------------------%
@@ -168,9 +169,23 @@ Pour obtenir les équations paramétriques, on ajoute le point $P$ à chaque par
 \end{enumerate}
 
 \item % b)
+Soit $\vec{r}(t)$ le vecteur position et $\vec{v}(t) = \frac{d}{dt}\,\vec{r}(t)$
+     le vecteur vitesse. Puisque la distance à l'origine est constante :
 
- % A REMPLIR PAR L'ETUDIANT:
+\[ \sqrt{x^2+y^2+z^2} = \kappa \Leftrightarrow \norme{\,\vec{r}(t)\,} = \kappa \]
 
+Ainsi :
+\[\norme{\,\vec{r}(t)\,}^2 = \kappa^2 \Leftrightarrow \vec{r}(t)\cdot
+    \vec{r}(t) = \kappa^2\]
+
+En dérivant : 
+\[ \frac{d}{dt}\big(\vec{r}(t)\cdot\vec{r}(t)\big) = \frac{d}{dt}\big(\kappa^2\big) \]
+\[ \vec{v}(t)\cdot\vec{r}(t) + \vec{r}(t)\cdot\vec{v}(t) = 0\]
+\[ 2(\vec{v}(t)\cdot\vec{r}(t)) = 0\]
+\[ \vec{v}(t)\cdot\vec{r}(t) = 0, \; \forall\,t\]
+
+Puisque le produit scalaire de $\vec{v}(t)$ et de $\vec{r}(t)$ est nul pour tout $t$, 
+les vecteurs sont orthogonaux pour tout $t$.
 \end{enumerate}
 
 
