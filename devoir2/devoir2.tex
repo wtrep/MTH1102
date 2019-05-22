@@ -185,12 +185,73 @@ Pour $C_2$:
 
 Ainsi, $C_1$ et $C_2$ satisfont la sphère d'équation $S:= x^2+y^2+z^2=4$, 
     soit la sphère de rayon $2$ centrée à l'origine $(0,0,0)$. 
-    Tel que démontré, $\{C_1,C_2\}\in S$.
+    Tel que démontré, $\{C_1,C_2\}\in S$. \\
 
 \item % (ii)
+D'une part, il faut trouver le(s) point(s) d'intersection entre les deux courbes, soit
+    s'il $\exists\,t_1,t_2\,|\,\vec{r_1}(t_1) = \vec{r_2}(t_2)$ : \\
+
+Pour $z\,(\vec{k})$ : 
+\begin{gather*}
+    1 = 2\sin(t_2) \Leftrightarrow \sin(t_2) = \frac{1}{2} \Rightarrow 
+        t_2 = \big\{\frac{\pi}{6}, \frac{5\pi}{6}\big\}
+\end{gather*}
+
+Pour $x\,(\vec{i})$ considérant $t_2 = \big\{\frac{\pi}{6}, \frac{5\pi}{6}\big\}$: 
+\begin{gather*}
+    \sqrt{3}\cos(t_1) = \sqrt{2}\cos(t_2) \\
+    t_1 = \big\{\frac{\pi}{4}, \frac{7\pi}{4}\big\},\; t_2=\frac{\pi}{6} \\
+    t_1 = \big\{\frac{3\pi}{4}, \frac{5\pi}{4}\big\},\; t_2=\frac{5\pi}{6} \\
+\end{gather*}
+
+Pour $y\,(\vec{j})$ considérant $t_2 = \big\{\frac{\pi}{6}, \frac{5\pi}{6}\big\}$: 
+\begin{gather*}
+    \sqrt{3}\sin(t_1) = -\sqrt{2}\cos(t_2) \\
+    t_1 = \big\{\frac{5\pi}{4}, \frac{7\pi}{4}\big\},\; t_2=\frac{\pi}{6} \\
+    t_1 = \big\{\frac{\pi}{4}, \frac{3\pi}{4}\big\},\; t_2=\frac{5\pi}{6} \\
+\end{gather*}
+
+En choisisant les angles communs, nous avons :
+\begin{gather*}
+    t_1 = \frac{3\pi}{4},\,t_2=\frac{5\pi}{6} \\
+    t_1 = \frac{7\pi}{4},\,t_2=\frac{\pi}{6} \\
+\end{gather*}
+
+Ensuite, il faut obtenir les vecteurs tangents avec la dérivée : 
+\begin{gather*}
+    \vec{T_1}(t) = \vec{r_1}\,'(t) = -\sqrt{3}\sin(t_1)\vec{i} + 
+        \sqrt{3}\cos(t_1)\vec{j} \\
+    \vec{T_2}(t) = \vec{r_2}\,'(t) = -\sqrt{2}\sin(t_2)\vec{i} +
+        \sqrt{2}\sin(t_2)\vec{j} + 2\cos(t_2)\vec{k} 
+\end{gather*} 
+
+Pour les deux points d'intersection :
+\begin{gather*}
+    \vec{T_1}\big(\frac{3\pi}{4}\big) = -\frac{\sqrt{6}}{2}\vec{i} - 
+        \frac{\sqrt{6}}{2}\vec{j} \\
+    \vec{T_2}\big(\frac{5\pi}{6}\big) = -\frac{\sqrt{2}}{2}\vec{i} + 
+    \frac{\sqrt{2}}{2}\vec{j} - \sqrt{3}\vec{k} \\
+    \vec{T_1}\cdot\vec{T_2} = -\frac{\sqrt{6}}{2}\cdot-\frac{\sqrt{2}}{2}
+        + -\frac{\sqrt{6}}{2}\cdot\frac{\sqrt{2}}{2} + 
+        0\cdot- \sqrt{3} = 0 \\
+\end{gather*}
+
+\begin{gather*}
+    \vec{T_1}\big(\frac{7\pi}{4}\big) = \frac{\sqrt{6}}{2}\vec{i} + 
+        \frac{\sqrt{6}}{2}\vec{j} \\
+    \vec{T_2}\big(\frac{\pi}{6}\big) = -\frac{\sqrt{2}}{2}\vec{i} + 
+    \frac{\sqrt{2}}{2}\vec{j} + \sqrt{3}\vec{k} \\
+    \vec{T_1}\cdot\vec{T_2} = \frac{\sqrt{6}}{2}\cdot-\frac{\sqrt{2}}{2}
+        + \frac{\sqrt{6}}{2}\cdot\frac{\sqrt{2}}{2} + 
+        0\cdot \sqrt{3} = 0 \\
+\end{gather*}
+
+Puisque pour les deux points d'intersection $\vec{T_1}\cdot\vec{T_2} = 0$, les deux
+    courbes se coupent à angle droit. \\
 
 \end{enumerate}
 
+\newpage
 \item % b)
 Soit $\vec{r}(t)$ le vecteur position et $\vec{v}(t) = \frac{d}{dt}\,\vec{r}(t)$
      le vecteur vitesse. Puisque la distance à l'origine est constante :
