@@ -5,7 +5,9 @@
 \documentclass[letterpaper,12pt,oneside,final]{book}
 \input{packages}
 
-
+\setlength{\parindent}{0pt}
+\newcommand{\norme}[1]{\left\Vert #1\right\Vert}
+\usepackage{amssymb}
 \begin{document}
 %--------------------------------------------------------------------------------------%
 
@@ -34,12 +36,49 @@
 
 %-----------------------------QUESTION 2---------------------------------%
 \newpage \section*{Question 2}
+Il faut déterminer la courbe d'intersection :
+\begin{align*}
+	x = 2 \Rightarrow z = 4 + y^2
+\end{align*}
+En posant $t=y$:
+\[\begin{cases}
+	x=2\\
+	y=t\\
+	z=4+t^2\\
+\end{cases}
+t \in \mathbb{R}\]
 
+Pour les deux points :
+\begin{gather*}
+	(2,-1,5) \Leftrightarrow t=-1 \\
+	(2,1,5) \Leftrightarrow t=1
+\end{gather*}
 
- % A REMPLIR PAR L'ETUDIANT:
+Ainsi:
+\begin{gather*}
+	L = \int_{a}^{b} \sqrt{\Big(\frac{dx}{dt}\Big)^2+
+		\Big(\frac{dy}{dt}\Big)^2 + \Big(\frac{dz}{dt}\Big)^2} \,dt
+		= \int_{-1}^{1} \sqrt{\big(0\big)^2+
+		\big(1\big)^2 + \big(2t\big)^2} \,dt \\
+	= \int_{-1}^{1} \sqrt{\big(1\big)^2 + \big(2t\big)^2} \,dt
+\end{gather*}
 
+En posant $u=2t$ et en calculant $du = \frac{1}{2}dt$ :
+\begin{gather*}
+	L = \frac{1}{2}\int_{-2}^{2} \sqrt{1^2 + u^2} \,du
+\end{gather*}
 
-
+En utilisant la formule de réduction \#21:
+\begin{gather*}
+	L = \frac{1}{2}\Big[\frac{u}{2}\sqrt{1^2 + u^2} + 
+		\frac{1}{2}\ln(u+\sqrt{1^2 + u^2})\Big]_{u=-2}^{u=2} \\
+	= \frac{1}{2} \Big(\sqrt{5} + \frac{1}{2}\big(\ln(2+\sqrt{5})\big)
+		-\Big(-\sqrt{5}+\frac{1}{2}\big(\ln(\sqrt{5}-2)\big)\Big)\Big) \\ 
+	= \frac{1}{2}\Big(2\sqrt{5}+\frac{1}{2}\ln\big(\frac{2+\sqrt{5}}
+		{\sqrt{5}-2}\big) \Big) = \sqrt{5} + 
+		\frac{1}{4}\ln\big( \frac{2+\sqrt{5}}{\sqrt{5}-2}\big) \\
+	\approx 2.9579
+\end{gather*}
 %-----------------------------QUESTION 3---------------------------------%
 \newpage \section*{Question 3}
 
