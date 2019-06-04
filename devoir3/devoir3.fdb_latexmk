@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1559576404 "c:/Users/wtrep/Poly/MTH1102/devoir3/devoir3.tex" "c:/Users/wtrep/Poly/MTH1102/devoir3/devoir3.pdf" "devoir3" 1559576407
+["pdflatex"] 1559613787 "c:/Users/wtrep/Poly/MTH1102/devoir3/devoir3.tex" "c:/Users/wtrep/Poly/MTH1102/devoir3/devoir3.pdf" "devoir3" 1559613789
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc" 1254938640 2375 baa924870cfb487815765f9094cf3728 ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc" 1254938640 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc" 1254938640 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -238,17 +238,17 @@
   "C:/Users/wtrep/AppData/Roaming/MiKTeX/2.9/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/wtrep/AppData/Roaming/MiKTeX/2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/wtrep/AppData/Roaming/MiKTeX/2.9/tex/latex/xstring/xstring.sty" 1543862004 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/wtrep/Poly/MTH1102/devoir3/devoir3.aux" 1559576407 806 70ad388dad3cd77eb254e4a15cc32756 ""
-  "c:/Users/wtrep/Poly/MTH1102/devoir3/devoir3.tex" 1559576403 5448 58da47bcf0613bbea8f7f24be0a4a887 ""
-  "devoir3.aux" 1559576407 806 70ad388dad3cd77eb254e4a15cc32756 "pdflatex"
-  "devoir3.out" 1559576406 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "devoir3.tex" 1559576403 5448 58da47bcf0613bbea8f7f24be0a4a887 ""
+  "c:/Users/wtrep/Poly/MTH1102/devoir3/devoir3.aux" 1559613788 806 70ad388dad3cd77eb254e4a15cc32756 ""
+  "c:/Users/wtrep/Poly/MTH1102/devoir3/devoir3.tex" 1559613786 6552 18b4ea90d9662e6d2872957f12a43534 ""
+  "devoir3.aux" 1559613788 806 70ad388dad3cd77eb254e4a15cc32756 "pdflatex"
+  "devoir3.out" 1559613788 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "devoir3.tex" 1559613786 6552 18b4ea90d9662e6d2872957f12a43534 ""
   "packages.tex" 1559397551 1929 5c8828154e8d86bad8f5e800bef001bc ""
   "page_couverture.tex" 1559083080 1851 83ec44bdb785df757f0023055dda1bd8 ""
   (generated)
-  "c:/Users/wtrep/Poly/MTH1102/devoir3/devoir3.log"
   "devoir3.log"
   "c:/Users/wtrep/Poly/MTH1102/devoir3/devoir3.pdf"
-  "devoir3.aux"
-  "devoir3.pdf"
   "devoir3.out"
+  "devoir3.pdf"
+  "c:/Users/wtrep/Poly/MTH1102/devoir3/devoir3.log"
+  "devoir3.aux"
