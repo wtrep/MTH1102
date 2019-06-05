@@ -380,13 +380,15 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\ec-lmr17.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\ec-lmr17.tfm
 INPUT C:\Users\wtrep\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\ec-lmro12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\ec-lmr8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\ec-lmr6.tfm
 INPUT c:\Users\wtrep\Poly\MTH1102\devoir3\devoir3.aux
 INPUT c:\Users\wtrep\Poly\MTH1102\devoir3\devoir3.out
 INPUT c:\Users\wtrep\Poly\MTH1102\devoir3\devoir3.out
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-mathit.enc
-INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-rm.enc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-ec.enc
 INPUT C:\Users\wtrep\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\esint\esint10.pfb
 INPUT C:\Users\wtrep\AppData\Roaming\MiKTeX\2.9\fonts\type1\public\esint\esint10.pfb
@@ -396,16 +398,22 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmmi12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmmi12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmmi6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmmi6.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmmi8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmmi8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr17.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr17.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr6.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmsy6.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmsy6.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\symbols\msbm10.pfb
