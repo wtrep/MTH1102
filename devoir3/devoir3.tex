@@ -30,9 +30,29 @@
 
 %-----------------------------QUESTION 1----------------------------------%
 \section*{Question 1}
+Il suffit de calculer le gradient et de le diviser par sa norme, au point
+	$(2,\frac{\pi}{4},4)$ qui correspond en coordonnées cartésiennes au
+	point $(\sqrt{2},\sqrt{2},4)$ :
+\begin{gather*}
+	\frac{\nabla(x,y)}{\norme{\nabla(x,y)}} = \frac{2x\vec{i} + 2y\vec{j}}
+		{2\sqrt{x^2+y^2}} \\
+	\frac{\nabla(\sqrt{2},\sqrt{2})}{\norme{\nabla(\sqrt{2}, \sqrt{2})}} 
+		= \frac{2\sqrt{2}\vec{i} + 2\sqrt{2}\vec{j}} 
+		{2\sqrt{2+2}} = \frac{\sqrt{2}}{2}\vec{i} +
+		\frac{\sqrt{2}}{2}\vec{j} \\
+\end{gather*}
 
- % A REMPLIR PAR L'ETUDIANT:
-
+Ainsi :
+\begin{gather*}
+	\frac{\sqrt{2}}{2}\vec{i} + \frac{\sqrt{2}}{2}\vec{j} = 
+		\frac{\sqrt{2}}{2}(\cos(\theta)\vec{e_r}-\sin(\theta)
+		\vec{e_{\theta}})+ \frac{\sqrt{2}}{2}(\sin(\theta)\vec{e_r} +
+		\cos(\theta)\vec{e_{\theta}}) \\
+	= \frac{\sqrt{2}}{2}(\frac{\sqrt{2}}{2}\vec{e_r}-\frac{\sqrt{2}}{2}
+	\vec{e_{\theta}})+ \frac{\sqrt{2}}{2}(\frac{\sqrt{2}}{2}\vec{e_r} +
+	\frac{\sqrt{2}}{2}\vec{e_{\theta}}) \\
+	= \vec{e_r}
+\end{gather*}
 
 %-----------------------------QUESTION 2---------------------------------%
 \newpage \section*{Question 2}
@@ -341,18 +361,39 @@ Ainsi, pour l'aire:
 		\frac{4\sqrt{2}}{3}
 \end{gather*}
 
+\newpage
 \item % c)
 
 	\begin{enumerate}[(i)]
 
 	\item % (i)
 
-	% A REMPLIR PAR L'ETUDIANT:
+	En appliquant le théorème de Green où D est le domaine borné par
+		la bouche gauche de la courbe C, on pose :
+	\begin{gather*}
+		Q = 5x + e^y \\
+		P = 2x + y \\
+		J_1 = \oint\limits_{B_1} \vec{F}\cdot\,d\vec{r} = 
+			\iint\limits_D \Big(\frac{\partial Q}{\partial x}-
+			\frac{\partial P}{\partial y} \Big)\,dA \\
+		= \iint\limits_D (5 - 1)\,dA = 4\iint\limits_D\,dA = 
+			4\cdot A(D) \\
+		= 4 \cdot \frac{2\sqrt{2}}{3} = \frac{8\sqrt{2}}{3}
+	\end{gather*}
 	
 	\item % (ii)
-
-	% A REMPLIR PAR L'ETUDIANT:
-	
+	En appliquant le théorème de Green où E est le domaine borné par
+		la bouche gauche et la boucle droite de la courbe C, on pose :
+	\begin{gather*}
+		Q = 5x + e^y \\
+		P = 2x + y \\
+		J_2 = \oint\limits_C \vec{F}\cdot d\vec{r} =
+			\iint\limits_E \Big(\frac{\partial Q}{\partial x}-
+			\frac{\partial P}{\partial y} \Big)\,dA \\
+		= \iint\limits_E (5 - 1)\,dA = 4\iint\limits_E\,dA = 
+			4\cdot A(E) \\
+		= 4 \cdot \frac{4\sqrt{2}}{3} = \frac{16\sqrt{2}}{3}
+	\end{gather*}
 	\end{enumerate}
 
 \end{enumerate}
