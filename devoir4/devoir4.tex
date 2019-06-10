@@ -13,10 +13,10 @@
 
 % A REMPLIR PAR L'ETUDIANT: 
 
-\newcommand\monPrenom{VotrePrénomIci}		%PRENOM
-\newcommand\monNom{VotreNomIci}			%NOM
-\newcommand\monMatricule{VotreMatriculeIci}	%MATRICULE
-\newcommand\monGroupe{VotreGroupeIci}		%GROUPE
+\newcommand\monPrenom{William}		%PRENOM
+\newcommand\monNom{Trépanier}			%NOM
+\newcommand\monMatricule{1952594}	%MATRICULE
+\newcommand\monGroupe{1}		%GROUPE
 
 %------------------------ Ne pas modifier la ligne suivante --------------%
 \input{page_couverture}
@@ -29,8 +29,24 @@
 %-----------------------------QUESTION 1 ----------------------------------%
 \section*{Question 1}
 
-
- % A REMPLIR PAR L'ETUDIANT:
+En utilisant la formule et soit D la région située dans le premier octant 
+    et bornée par le paraboloïde $z = 2(x^2+y^2)$ et le plan $z=2$:
+\begin{gather*}
+    A = \iint\limits_D \sqrt{1 + \Big(\frac{\partial z}{\partial x}\Big)^2 + 
+        \Big(\frac{\partial z}{\partial y}\Big)^2}\,dA =
+        \iint\limits_D \sqrt{1+(4x)^2+(4y)^2}\,dA \\
+    = \iint\limits_D \sqrt{1+16(x^2+y^2)}\,dA = \int_0^{\pi/2} 
+        \int_0^1 \sqrt{1 + 16r^2}\,r\,drd\theta \\
+    = \int_0^{\pi/2} d\theta \int_0^1 r\,\sqrt{1 + 16r^2}\,drd\theta
+        = \frac{\pi}{2} \int_0^1 r\,\sqrt{1 + 16r^2}\,drd\theta
+\end{gather*}
+En posant $u = 1+16r^2$ et en calculant $du=32r\,dr$:
+\begin{gather*}
+    A = \frac{\pi}{64} \int_1^{17} u^{1/2}\,du = 
+        \frac{\pi}{96}\, u^{3/2}\Big|_1^{17} =
+        \frac{\pi}{96}\, (17^{\frac{3}{2}} - 1) = 
+        \frac{\pi}{96}\, (17\sqrt{17} - 1) 
+\end{gather*}
 
 
 %-----------------------------QUESTION 2 ----------------------------------%
