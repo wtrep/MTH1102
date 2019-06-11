@@ -366,8 +366,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\lm\ec-lmro12.tfm
 INPUT c:\Users\wtrep\Poly\MTH1102\devoir4\devoir4.aux
 INPUT c:\Users\wtrep\Poly\MTH1102\devoir4\devoir4.out
 INPUT c:\Users\wtrep\Poly\MTH1102\devoir4\devoir4.out
-INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-mathsy.enc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\lm\lm-ec.enc
@@ -391,3 +391,5 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmr8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmsy10.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmsy8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\lm\lmsy8.pfb

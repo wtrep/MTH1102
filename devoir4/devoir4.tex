@@ -4,7 +4,8 @@
 																																					
 \documentclass[letterpaper,12pt,oneside,final]{book}
 \input{packages}
-
+\setlength{\parindent}{0pt}
+\newcommand{\norme}[1]{\left\Vert #1\right\Vert}
 
 \begin{document}
 %--------------------------------------------------------------------------------------%
@@ -51,9 +52,39 @@ En posant $u = 1+16r^2$ et en calculant $du=32r\,dr$:
 
 %-----------------------------QUESTION 2 ----------------------------------%
 \newpage\section*{Question 2}
+On trouve d'abord $\vec{r_u}$ et $\vec{r_v}$:
+\begin{gather*}
+    \vec{r_u} = 2u\vec{i} + v\vec{j} \\
+    \vec{r_v} = u\vec{j} +v\vec{k} 
+\end{gather*}
 
+On calcule ensuite $\norme{\vec{r_u} \times \vec{r_v}}$ : 
+\begin{gather*}
+    \vec{r_u}\times\vec{r_v} = 
+        \begin{vmatrix}
+            \vec{i} & \vec{j} & \vec{k} \\
+            2u      & v       & 0       \\
+            0       & u       & v      
+        \end{vmatrix}
+        = v^2\vec{i} - 2uv\vec{j} + 2u^2\vec{k} \\
+    \\
+    \norme{\vec{r_u} \times \vec{r_v}} = \sqrt{
+        (v^2)^2 + (-2uv)^2 + (2u^2)^2} = \sqrt{v^4
+        + 4u^2v^2 + 4u^4} \\
+    = \sqrt{(v^2 + 2u^2)^2} = v^2 + 2u^2 
+\end{gather*}
 
-% A REMPLIR PAR L'ETUDIANT:
+Quant à l'intégrale et soit D le domaine des bornes de $u,v$ :
+\begin{gather*}
+    \iint\limits_S zx\,dS = \frac{1}{2}\iint\limits_D (v^2u^2)(v^2+2u^2)\,dA
+        = \frac{1}{2}\int_{-2}^2\int_0^1 (u^2v^4+2u^4v^2)\,dvdu \\
+    = \frac{1}{2}\int_{-2}^2 \Big[\frac{u^2v^5}{5}+\frac{2u^4v^3}{3}\Big]
+        _{v=0}^{v=1}\,du = \frac{1}{2}\int_{-2}^2 \Big(\frac{u^2}{5} + 
+        \frac{2u^4}{3} \Big)\,du \\
+    = \frac{1}{2} \Big[\frac{u^3}{15} + \frac{2u^5}{15}\Big]_{u=-2}^{u=2}
+        = \frac{1}{2} \cdot \frac{144}{15} = \frac{25}{4}
+\end{gather*}
+
 
 
 %-----------------------------QUESTION 3 ----------------------------------%
