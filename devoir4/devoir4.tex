@@ -128,18 +128,31 @@ Quant à l'intégrale et soit D le domaine des bornes de $u,v$ :
 
 %-----------------------------QUESTION 4 ---------------------------------%
 \newpage \section*{Question 4}
-
-
-
 \begin{enumerate}[a)]
 
 \item % a)
+Puisque pour tout point appartenant à $S$, $\vec{F}$ est tangent à $S$ et 
+    considérant que $\vec{n}$ est orthogonal à $S$:
+\begin{gather*}
+    \angle(\vec{F}, \vec{n}) = \frac{\pi}{2} 
+\end{gather*}
 
- % A REMPLIR PAR L'ETUDIANT:
+Ainsi et en chaque point : 
+\begin{gather*}
+    \iint\limits_S\vec{F}\cdot\,d\vec{S}=\iint\limits_S\vec{F}\cdot\vec{n}\,dS
+        = \iint\limits_S \norme{\vec{F}} \norme{\vec{n}} 
+        \cos(\angle(\vec{F}, \vec{n}))\,dS = \iint\limits_S 0\,dS = 0
+\end{gather*}
 
 \item % b)
+Puisque $\norme{\vec{n}} = 1$ :
+\begin{gather*}
+    \iint\limits_S\vec{F}\cdot\,d\vec{S}=\iint\limits_S\vec{F}\cdot\vec{n}\,dS
+        =  c\iint\limits_S \vec{n}\cdot\vec{n}\,dS
+        =  c\iint\limits_S \norme{\vec{n}}^2\,dS \\
+    =  c\iint\limits_S 1^2\,dS = cA
+\end{gather*}
 
- % A REMPLIR PAR L'ETUDIANT:
 
 \end{enumerate}
 

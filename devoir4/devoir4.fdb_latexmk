@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1560286164 "c:/Users/wtrep/Poly/MTH1102/devoir4/devoir4.tex" "c:/Users/wtrep/Poly/MTH1102/devoir4/devoir4.pdf" "devoir4" 1560286166
+["pdflatex"] 1560295209 "c:/Users/wtrep/Poly/MTH1102/devoir4/devoir4.tex" "c:/Users/wtrep/Poly/MTH1102/devoir4/devoir4.pdf" "devoir4" 1560295211
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc" 1254938640 2375 baa924870cfb487815765f9094cf3728 ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc" 1254938640 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc" 1254938640 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -231,17 +231,17 @@
   "C:/Users/wtrep/AppData/Roaming/MiKTeX/2.9/tex/latex/url/url.sty" 1388494052 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/wtrep/AppData/Roaming/MiKTeX/2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/wtrep/AppData/Roaming/MiKTeX/2.9/tex/latex/xstring/xstring.sty" 1543862004 123 a302f2c651a95033260db60e51527ae8 ""
-  "c:/Users/wtrep/Poly/MTH1102/devoir4/devoir4.aux" 1560286165 806 70ad388dad3cd77eb254e4a15cc32756 ""
-  "c:/Users/wtrep/Poly/MTH1102/devoir4/devoir4.tex" 1560286163 5906 13f7a1beaea338c9749da96dbb547b5d ""
-  "devoir4.aux" 1560286165 806 70ad388dad3cd77eb254e4a15cc32756 "pdflatex"
-  "devoir4.out" 1560286165 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "devoir4.tex" 1560286163 5906 13f7a1beaea338c9749da96dbb547b5d ""
+  "c:/Users/wtrep/Poly/MTH1102/devoir4/devoir4.aux" 1560295211 806 70ad388dad3cd77eb254e4a15cc32756 ""
+  "c:/Users/wtrep/Poly/MTH1102/devoir4/devoir4.tex" 1560295208 6597 50adc253796edf6be249e3a604b872b4 ""
+  "devoir4.aux" 1560295211 806 70ad388dad3cd77eb254e4a15cc32756 "pdflatex"
+  "devoir4.out" 1560295211 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "devoir4.tex" 1560295208 6597 50adc253796edf6be249e3a604b872b4 ""
   "packages.tex" 1442700882 1930 c43919f49d3ddddb1d5711c7a4002f29 ""
   "page_couverture.tex" 1559665882 1853 d90ee86c554b70ef8e8f80a60d3ac4f5 ""
   (generated)
-  "devoir4.out"
-  "devoir4.log"
   "devoir4.pdf"
   "c:/Users/wtrep/Poly/MTH1102/devoir4/devoir4.log"
   "c:/Users/wtrep/Poly/MTH1102/devoir4/devoir4.pdf"
+  "devoir4.log"
+  "devoir4.out"
   "devoir4.aux"
