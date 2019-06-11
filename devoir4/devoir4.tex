@@ -85,15 +85,46 @@ Quant à l'intégrale et soit D le domaine des bornes de $u,v$ :
         = \frac{1}{2} \cdot \frac{144}{15} = \frac{25}{4}
 \end{gather*}
 
-
-
 %-----------------------------QUESTION 3 ----------------------------------%
 \newpage \section*{Question 3}
+On trouve d'abord $\vec{r_u}$ et $\vec{r_v}$:
+\begin{gather*}
+    \vec{r_u} \times \vec{r_v} = 
+        \begin{vmatrix}
+            \vec{i} & \vec{j} & \vec{k} \\
+            0       & 2u      & 1       \\
+            1       & -1      & 2v 
+        \end{vmatrix}
+        = (4uv+1)\vec{i} + \vec{j} -2u\vec{k}
+\end{gather*}
 
+On vérifie ensuite l'orientation avec le vecteur normal au point $(2,2,2)$:
+\begin{gather*}
+    x = v \Rightarrow v = 2 \\
+    z = u+2v \Rightarrow 2 = u + 4 \Rightarrow u = -2 \\
+    y = 4 - 2 = 2 \\
+    \\
+    \vec{n}(-2,2) = \frac{(\vec{r_u}\times\vec{r_v})(-2,2)}{\norme{
+        (\vec{r_u}\times\vec{r_v})(-2,2)}} = \frac{-15\vec{i}+\vec{j}+4\vec{k}}
+        {\sqrt{15^2+1^2+4^2}} = \frac{1}{11\sqrt{2}}(-15\vec{i}+\vec{j}+4\vec{k})
+\end{gather*}
 
- % A REMPLIR PAR L'ETUDIANT:
+Ainsi : 
+\begin{gather*}
+    \vec{r_u}\times\vec{r_v} = -(4uv+1)\vec{i} - \vec{j} +2u\vec{k}
+\end{gather*}
 
-
+Quant à l'intégrale et soit D le domaine des bornes de $u,v$ :
+\begin{gather*}
+    \iint\limits_S \vec{F}\cdot d\vec{S} = \iint\limits_D \vec{F}\cdot
+        (\vec{r_u}\times\vec{r_v})\, dA \\
+    = \iint\limits_D (v^2\vec{i}+(u+v^2)\vec{j}+(1-(u^2-v))\vec{k})\cdot
+        (-(4uv+1)\vec{i} - \vec{j} +2u\vec{k}) \, dA \\
+    = \int_{-3}^{3}\int_{-3}^{3} (-4uv^3-2v^2-3u+2u^3+2uv)\,dudv \\
+    = \int_{-3}^{3} \Big[-2u^2v^3-2uv^2-\frac{3u^2}{2}+\frac{u^4}{2}+u^2v
+        \Big]_{u=-3}^{u=3}\,dv = \int_{-3}^3 -12v^2 \,dv \\
+    = -4\cdot v^3\Big|_{-3}^3 = -216 
+\end{gather*}
 
 %-----------------------------QUESTION 4 ---------------------------------%
 \newpage \section*{Question 4}
