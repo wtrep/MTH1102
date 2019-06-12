@@ -254,13 +254,43 @@ Considérant que D est le disque de rayon $10$ centré à l'origine:
 \begin{enumerate}[a)]
 
 \item % a)
-
- % A REMPLIR PAR L'ETUDIANT:
+Une surface fermée est une surface qui est la frontière d'une région solide
+    $E$. Ainsi pour démontrer que la surface $S$ est fermée, il suffit de
+    démontrer que $E$ existe : 
+\begin{gather*}
+    E:=\{(x,y,z)|\,0\le x\le 2,\,0\le y\le \sqrt{2},\,0\le z\le 2-y^2\} \\
+    E \,\exists \Rightarrow S \text{ est fermée}
+\end{gather*}
 
 \item % b)
+Puisque $\vec{n}$ pointe vers l'intérieur de la surface, l'orientation est
+    négative. En utilisant le théorème de flux-divergence : 
 
- % A REMPLIR PAR L'ETUDIANT:
+\begin{gather*}
+    \iint\limits_S \vec{F}\cdot d\vec{S} = \iiint\limits_E \text{div}\vec{F}
+        \,dV \\
+    \text{div}\vec{F} = -2x -2y + 1
+\end{gather*}
+Puisque l'orientation de la surface est négative et que le théorème de flux-
+    divergence est vrai pour les surfaces orientées positivement, il suffit
+    de multiplier $\text{div}\vec{F}\cdot -1$. Ainsi, pour les fins de
+    l'application du théorème :
+\begin{gather*}
+    \text{div}\vec{F} = 2x + 2y - 1
+\end{gather*}
 
+Quant à l'intégrale :
+\begin{gather*}
+    \iiint\limits_E \text{div}\vec{F}\,dV = \iiint\limits_E (2x+2y-1)\,dV
+        = \int_0^2\int_0^{\sqrt{2}}\int_0^{2-y^2} (2x+2y-1)\,dzdydx \\
+    \int_0^2\int_0^{\sqrt{2}}(2x+2y-1)(2-y^2)\,dydx = 
+        \int_0^2\int_0^{\sqrt{2}} (4x-2xy^2+4y-2y^3-2+y^2)\,dydx \\
+    = \int_0^2 \Big[4xy-\frac{2xy^3}{3}+2y^2-\frac{y^4}{2}-2y+\frac{y^3}{3}
+        \Big]_{y=0}^{y=\sqrt{2}}\,dx = \int_0^2\Big(\frac{8\sqrt{2}x}{3}
+        +2-\frac{4\sqrt{2}}{3}\Big)\,dx \\
+    = \Big[\frac{8\sqrt{2}x^2}{6} + 2x - \frac{4\sqrt{2}x}{3}\Big]_{x=0}
+        ^{x=2} = 4 + \frac{8\sqrt{2}}{3}
+\end{gather*}
 \end{enumerate}
 
 
