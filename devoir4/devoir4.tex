@@ -271,10 +271,10 @@ Puisque $\vec{n}$ pointe vers l'intérieur de la surface, l'orientation est
         \,dV \\
     \text{div}\vec{F} = -2x -2y + 1
 \end{gather*}
-Puisque l'orientation de la surface est négative et que le théorème de flux-
-    divergence est vrai pour les surfaces orientées positivement, il suffit
-    de multiplier $\text{div}\vec{F}\cdot -1$. Ainsi, pour les fins de
-    l'application du théorème :
+Puisque l'orientation de la surface est négative et que le théorème de 
+    flux-divergence est vrai pour les surfaces orientées positivement, 
+    il suffit de multiplier $\text{div}\vec{F}\cdot -1$. Ainsi, pour 
+    les fins de l'application du théorème :
 \begin{gather*}
     \text{div}\vec{F} = 2x + 2y - 1
 \end{gather*}
@@ -297,18 +297,62 @@ Quant à l'intégrale :
 %-----------------------------QUESTION 7 ---------------------------------%
 \newpage \section*{Question 7}
 
-
-
 \begin{enumerate}[a)]
 
 \item % a)
+Sachant que $\rho(x,y,z) = c$
+\begin{gather*}
+    M_{yz} = \iiint\limits_E cx\,dV = c\iiint\limits_E x\,dV
+\end{gather*}
 
- % A REMPLIR PAR L'ETUDIANT:
+En posant :
+\begin{gather*}
+    \vec{F}(x,y,z) = \frac{x^2}{2}\vec{i} \\
+    \text{div}\vec{F} = x
+\end{gather*}
+
+En appliquant le théorème de flux-divergence : 
+\begin{gather*}
+    \iiint\limits_E \text{div}\vec{F}\,dV = \iint\limits_S \vec{F}\cdot
+        d\vec{S} \Longrightarrow \\
+    c\iiint\limits_E x\,dV = c \iint\limits_S \Big(\frac{x^2}{2}\vec{i}\Big)
+        \cdot d\vec{S}=\frac{c}{2}\iint\limits_S (x^2\vec{i})\cdot d\vec{S}
+\end{gather*}
+
+En substituant $x$ par $y$ et $z$, on peut démontrer de manière analogue que:
+\begin{gather*}
+    M_{xz} = \iiint\limits_E cy\,dV = c\iiint\limits_E y\,dV = 
+        \frac{c}{2}\iint\limits_S (y^2\vec{j})\cdot d\vec{S} \\
+    M_{xy} = \iiint\limits_E cz\,dV = c\iiint\limits_E z\,dV = 
+        \frac{c}{2}\iint\limits_S (z^2\vec{k})\cdot d\vec{S}
+\end{gather*}
 
 \item % b)
+Puisque le solide est symétrique par rapport à x et y et que l'intégrale 
+    des fonctions sinus et cosinus évaluée entre $0$ et $2\pi$ est égale 
+    à $0$ :
+\begin{gather*}
+    \overline{x} = 0 \\
+    \overline{y} = 0 \\ 
+\end{gather*}
 
- % A REMPLIR PAR L'ETUDIANT:
+\begin{gather*}
+    \overline{z}=\frac{M_{xy}}{m}=\frac{1}{m}\iint\limits_S (z^2\vec{k})
+        \cdot d\vec{S} \\
+    \vec{R_u}\times\vec{R_v} = -u\sin u\cos v\vec{i} -u\sin u\sin v\vec{j} + \\
+    (u^2 \sin u\cos^3 v+u^2 \sin u\cos u\sin^2v+u\sin^2 u \sin^2 v+
+        u \sin^2 u \cos^2 v)\vec{k} \\
+    \overline{z}= \frac{1}{m}\iint\limits_D (u^2\vec{k})\cdot (\vec{R_u}\times
+        \vec{R_v})\,dA \\
+    = \frac{1}{m} \iint\limits_D u^2(u^2 \sin u\cos^3 v+u^2 \sin u\cos u\sin^2v+
+        u\sin^2 u \sin^2 v+ \\
+    u \sin^2 u \cos^2 v)\,dA \\
+    = \frac{1}{m} \int_0^{2\pi}\int_0^{\pi} (u^4 \sin u\cos^3 v+u^4 \sin u\cos u\sin^2v+
+        u^3\sin^2 u \sin^2 v+ \\
+    u^3 \sin^2 u \cos^2 v)\,dudv = 0
+\end{gather*}
 
+Le centre de masse est $(0,0,0)$.
 
 \end{enumerate}
 
