@@ -166,17 +166,82 @@ Puisque $\norme{\vec{n}} = 1$ :
 \begin{enumerate}[a)]
 
 \item % a)
+D'une part, il suffit de démontrer que $\vec{r}(0) = \vec{r}(2\pi)$:
+\begin{gather*}
+    \vec{r}(0) = 10\cos(0)\vec{i} + 10\sin(0)\vec{j} + 100\cos^2(0)\vec{k}
+        = 10\vec{i} + 100\vec{k} \\
+    \vec{r}(2\pi) = 10\cos(2\pi)\vec{i} + 10\sin(2\pi)\vec{j} + 
+        100\cos^2(2\pi)\vec{k} = 10\vec{i} + 100\vec{k} \\
+    \vec{r}(0) = \vec{r}(2\pi) \Rightarrow \text{C est une courbe fermée}
+\end{gather*}
 
- % A REMPLIR PAR L'ETUDIANT:
+Nous avons $x=10\cos(t)$ et $z=100\cos^2(t) = (10\cos(t))^2 = x^2$. Ainsi :
+\begin{gather*}
+    z = f(x,y) = x^2
+\end{gather*}
 
 \item % b)
-
- % A REMPLIR PAR L'ETUDIANT:
+\begin{itemize}
+    \item[$\bullet$] Il est possible de calculer directement la circulation 
+        en évaluant la composante de $\vec{F}$ dans la direction du vecteur 
+        tangent unitaire $\vec{T}$. Ainsi, on calcule pour obtenir la 
+        circulation :  $\oint\limits_C \vec{F}\cdot\vec{T}\,ds$. \\
+    \item[$\bullet$] Il est également possible d'utiliser le théorème de
+        Stokes pour évaluer cette même intégrale en évaluant la composante
+        normale du rotationnel de $\vec{F}$. Ainsi, on calcule pour obtenir
+        la circulation: $\iint\limits_S \text{rot}\vec{F}\cdot\vec{n}\,dS$
+\end{itemize}
 
 \item % c)
+Soit $C$ la courbe paramétrée, $S$ la surface paramétrée par $\vec{R}(x,y)$
+    trouvée en a) et $D$ la projection de S sur le plan $xy$:
+\begin{gather*}
+    \oint\limits_C \vec{F}\cdot\vec{T}\,ds=\iint\limits_S\text{rot}\vec{F}
+        \cdot\vec{n}\,dS = \iint\limits_D \text{rot}\vec{F}(\vec{R}(x,y))
+        \cdot (\vec{R_x}\times\vec{R_y})\,dA
+\end{gather*}
 
- % A REMPLIR PAR L'ETUDIANT:
+Nous avons : 
+\begin{gather*}
+    \vec{R}(x,y) = x\vec{i}+y\vec{j}+x^2\vec{k} \\
+    \vec{R_x}\times\vec{R_y} = 
+        \begin{vmatrix}
+            \vec{i} & \vec{j} & \vec{k} \\
+            1       & 0       & 2x      \\
+            0       & 1       & 0
+        \end{vmatrix}
+        = -2x\vec{i} + \vec{k}
+\end{gather*}
+\begin{gather*}
+    \text{rot}\vec{F} = 
+        \begin{vmatrix}
+            \vec{i} & \vec{j} & \vec{k}       \\
+            \frac{\partial}{\partial x} & \frac{\partial}{\partial y}
+                & \frac{\partial}{\partial z} \\
+            y^2+z^2 & 1       & xy+\sin(z^4)
+        \end{vmatrix}
+        = x\vec{i} - (y-2z)\vec{j} -2y\vec{k} \\
+    \text{rot}\vec{F}\cdot(\vec{R_x}\times\vec{R_y}) = -2x^2 -2y
+\end{gather*}
 
+Considérant que D est le disque de rayon $10$ centré à l'origine:
+\begin{gather*}
+    \iint\limits_D \text{rot}\vec{F}(\vec{R}(x,y))
+        \cdot (\vec{R_x}\times\vec{R_y})\,dA = 
+        \iint\limits_D (-2x^2 -2y)\,dA \\
+    = \int_0^{2\pi}\int_0^{10} (-2r^2\cos^2\theta-2r\sin\theta)r\,
+        drd\theta = \int_0^{2\pi}\int_0^{10} (-2r^3\cos^2\theta-
+        2r^2\sin\theta)\,drd\theta \\
+    = \int_0^{2\pi}\Big[-\frac{\cos^2\theta}{2}r^4 - \frac{2\sin\theta}{3}r^3
+        \Big]_{r=0}^{r=10}\,d\theta = \int_0^{2\pi}\Big(-5000\cos^2\theta - 
+        \frac{2000}{3}\sin\theta\Big)\,d\theta \\
+    = \int_0^{2\pi} \Big(-5000\Big(\frac{1+\cos2\theta}{2}\Big)-
+        \frac{2000}{3}\sin\theta\Big)\,d\theta \\
+    = \int_0^{2\pi} \Big(-2500 - \frac{2500}{2}\cos\theta\ -
+        \frac{2000}{3}\sin\theta\Big)\,d\theta \\
+    = \Big[-2500\theta-\frac{2500}{2}\sin\theta + 
+        \frac{2000}{3}\cos\theta\Big]_{0}^{2\pi} = -5000\pi
+\end{gather*}
 
 \end{enumerate}
 
