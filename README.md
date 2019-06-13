@@ -1,3 +1,3 @@
 # MTH1102
-Calcul II
+Calcul II \
 Polytechnique Montréal
